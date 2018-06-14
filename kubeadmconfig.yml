@@ -1,0 +1,19 @@
+apiVersion: kubeadm.k8s.io/v1alpha1
+kind: MasterConfiguration
+kubernetesVersion: v1.9.3
+etcd:
+  endpoints:
+  - "http://10.111.0.95:2379"
+  - "http://10.111.0.95:3379"
+  - "http://10.111.0.95:4379"
+apiServerExtraArgs:
+  apiserver-count: "3"
+apiServerCertSANs:
+- "10.111.0.161"
+- "10.111.0.232"
+- "10.111.0.169"
+- "10.111.0.54"
+- "127.0.0.1"
+token: 958650.ef1301d054d858cc
+tokenTTL: "0"
+
